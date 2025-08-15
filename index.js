@@ -48,8 +48,9 @@ client.once('ready', async () => {
 });
 
 // تشغيل الخادم والبوت
-app.listen(3000, '0.0.0.0', () => {
-    console.log('🌐 Web server is running on port 3000');
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🌐 Web server is running on port ${PORT}`);
 });
 
 client.login(BOT_TOKEN).catch(console.error);
